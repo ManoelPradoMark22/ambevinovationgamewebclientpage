@@ -1,9 +1,38 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 function Drinks() {
-  return <h1>Drinks</h1>;
+  return (
+    <Container>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+      <h1>Drinks</h1>
+    </Container>
+  );
 }
 
 export default Drinks;
