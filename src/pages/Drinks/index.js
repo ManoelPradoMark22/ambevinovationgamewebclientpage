@@ -1,37 +1,12 @@
 import React from 'react';
 
-import { Container } from './styles';
+import SliderBox from '../../components/Slider';
 
 function Drinks() {
   return (
-    <Container>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-      <h1>Drinks</h1>
-    </Container>
+    <div style={{ overflow: 'hidden' }}>
+      <SliderBox />
+    </div>
   );
 }
 
