@@ -303,10 +303,10 @@ export default function SliderBox() {
                   <li>- Sachê de açúcar mascavo (50g)</li>
                   <li>- Etc etc etc</li>
                 </ul>
-                <h3 style={{ marginBottom: '5px', marginTop: '35px' }}>
+                <h3 style={{ marginBottom: '5px', marginTop: '25px' }}>
                   Onde Comprar?
                 </h3>
-                <div style={{ display: 'flex' }}>
+                <div style={{ display: 'flex', marginBottom: '25px' }}>
                   <img
                     src={logoZe}
                     alt="ZeDeliveryLogo"
@@ -321,26 +321,6 @@ export default function SliderBox() {
                     width={50}
                   />
                 </div>
-                {/* o que vai vir da api vai ser o link:
-                https://www.youtube.com/embed/ID_DO_VÍDEO
-                concatenado com esse sufixo:
-                ?enablejsapi=1
-                para permitir que meu código JavaScript consiga acessar esse iframe
-                e PARAR O VÍDEO quando eu fechar este modal de detalhes do Drink!
-                */}
-                <h3 style={{ marginBottom: '5px', marginTop: '35px' }}>
-                  Modo de preparo (assista ao vídeo):
-                </h3>
-                <iframe
-                  id="player"
-                  width="100%"
-                  maxWidth="100%"
-                  height="415"
-                  src="https://www.youtube.com/embed/4KXsOm-qQRk?enablejsapi=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
               </Content>
             </DialogContent>
           </Dialog>
