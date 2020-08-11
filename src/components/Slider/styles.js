@@ -32,7 +32,6 @@ export const Product = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
-  cursor: pointer;
 
   > h3 {
     padding-top: 10px;
@@ -50,11 +49,57 @@ export const BoxImage = styled.div`
   width: 225px;
   margin-bottom: 5px;
   border-radius: 16px;
-  transition: opacity 0.2s;
+  position: relative;
+
+  img {
+    border-radius: 16px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s;
+  }
+
+  text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    left: 50%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+  }
 
   &:hover {
-    opacity: 0.8;
+    img {
+      opacity: 0.4;
+    }
+
+    text {
+      display: flex;
+    }
   }
+`;
+
+export const InvisibleBox = styled.div`
+  margin: 40px 0;
+  height: 30px;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BoxImageDetails = styled.div`
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  height: 225px;
+  width: 225px;
+  margin-bottom: 5px;
+  border-radius: 16px;
 
   img {
     border-radius: 16px;
@@ -64,12 +109,16 @@ export const BoxImage = styled.div`
   }
 `;
 
-export const InvisibleBox = styled.div`
-  margin: 40px 0;
-  height: 30px;
+export const DrinkName = styled.text`
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 `;
 
-export const Content = styled.div``;
+export const DrinkDescription = styled.text`
+  margin-top: 25px;
+  max-width: 70%;
+`;
 
 export const ButtonOpenDrinkDetails = styled.button`
   border: 0;

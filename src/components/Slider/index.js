@@ -24,9 +24,12 @@ import styles, {
   CategoryBoxFeat,
   Product,
   BoxImage,
+  ButtonOpenDrinkDetails,
   InvisibleBox,
   Content,
-  ButtonOpenDrinkDetails,
+  BoxImageDetails,
+  DrinkName,
+  DrinkDescription,
 } from './styles';
 
 const useStyles = makeStyles(styles);
@@ -75,12 +78,21 @@ export default function SliderBox() {
     false
   );
 
+  function stopVideo() {
+    const frame = document.getElementById('player');
+    frame.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      '*'
+    );
+  }
+
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
   }
 
   function closeModalDetailsDrink() {
     setClassicModalDetailsDrink(false);
+    stopVideo();
   }
 
   return (
@@ -93,6 +105,7 @@ export default function SliderBox() {
               <Product>
                 <ButtonOpenDrinkDetails onClick={() => openModalDetailsDrink()}>
                   <BoxImage>
+                    <text>+ detalhes</text>
                     <img src={drink1} alt="produto" />
                   </BoxImage>
                 </ButtonOpenDrinkDetails>
@@ -262,7 +275,7 @@ export default function SliderBox() {
                 <Close className={classes.modalClose} />
               </IconButton>
               <h4 style={{ userSelect: 'none' }} className={classes.modalTitle}>
-                Detalhes do Drink
+                Detalhes do Kit
               </h4>
             </DialogTitle>
             <DialogContent
@@ -270,7 +283,44 @@ export default function SliderBox() {
               className={classes.modalBody}
             >
               <Content>
-                <h1>Detalhes do drink</h1>
+                <BoxImageDetails>
+                  <img src={drink1} alt="produto" />
+                </BoxImageDetails>
+
+                <DrinkName>Cranberry Tropical</DrinkName>
+
+                <DrinkDescription>
+                  Drink elaborado com Suco de Melância DO BEM, leite condensado,
+                  limão...
+                </DrinkDescription>
+                <h3 style={{ marginBottom: '5px', marginTop: '15px' }}>
+                  Conteúdo do Kit
+                </h3>
+                <ul>
+                  <li>- 1L de Suco 'Do Bem' - Melancia</li>
+                  <li>- Sachê de açúcar mascavo (50g)</li>
+                  <li>- Etc etc etc</li>
+                </ul>
+                {/* o que vai vir da api vai ser o link:
+                https://www.youtube.com/embed/ID_DO_VÍDEO
+                concatenado com esse sufixo:
+                ?enablejsapi=1
+                para permitir que meu código JavaScript consiga acessar esse iframe
+                e PARAR O VÍDEO quando eu fechar este modal de detalhes do Drink!
+                */}
+                <h3 style={{ marginBottom: '5px', marginTop: '35px' }}>
+                  Modo de preparo (assista ao vídeo):
+                </h3>
+                <iframe
+                  id="player"
+                  width="100%"
+                  maxWidth="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/4KXsOm-qQRk?enablejsapi=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </Content>
             </DialogContent>
           </Dialog>

@@ -1,7 +1,7 @@
 const modalStyle = {
   modal: {
     borderRadius: '6px',
-    minWidth: '40%',
+    minWidth: '50%',
   },
   modalCategory: {
     borderRadius: '6px',
