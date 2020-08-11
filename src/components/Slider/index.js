@@ -302,6 +302,7 @@ export default function SliderBox() {
                     href="https://www.ze.delivery/"
                     target="_blank"
                     rel="noreferrer"
+                    title="Zé Delivery"
                   >
                     <img
                       src={logoZe}
@@ -314,6 +315,7 @@ export default function SliderBox() {
                     href="https://www.emporiodacerveja.com.br/"
                     target="_blank"
                     rel="noreferrer"
+                    title="Empório da Cerveja"
                   >
                     <img
                       src={logoec}
