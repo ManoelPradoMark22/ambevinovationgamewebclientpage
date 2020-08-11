@@ -80,21 +80,12 @@ export default function SliderBox() {
     false
   );
 
-  function stopVideo() {
-    const frame = document.getElementById('player');
-    frame.contentWindow.postMessage(
-      '{"event":"command","func":"stopVideo","args":""}',
-      '*'
-    );
-  }
-
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
   }
 
   function closeModalDetailsDrink() {
     setClassicModalDetailsDrink(false);
-    stopVideo();
   }
 
   return (
@@ -327,7 +318,7 @@ export default function SliderBox() {
                     <img
                       src={logoec}
                       style={{ marginLeft: '25px', borderRadius: '50%' }}
-                      alt="EmCasaLogo"
+                      alt="emporiologo"
                       height={50}
                       width={50}
                     />
