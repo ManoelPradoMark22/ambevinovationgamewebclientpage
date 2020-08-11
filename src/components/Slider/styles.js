@@ -113,11 +113,13 @@ export const DrinkName = styled.text`
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  font-weight: bold;
 `;
 
 export const DrinkDescription = styled.text`
   margin-top: 25px;
   max-width: 70%;
+  text-align: center;
 `;
 
 export const ButtonOpenDrinkDetails = styled.button`

@@ -18,6 +18,8 @@ import GridItem from '../Grid/GridItem';
 import drink1 from '../../assets/drink1.jpg';
 import drink2 from '../../assets/drink2.jpg';
 import drink3 from '../../assets/drink3.jpg';
+import logoZe from '../../assets/logoze.png';
+import logoec from '../../assets/logoec.jpg';
 
 import styles, {
   Container,
@@ -301,6 +303,24 @@ export default function SliderBox() {
                   <li>- Sachê de açúcar mascavo (50g)</li>
                   <li>- Etc etc etc</li>
                 </ul>
+                <h3 style={{ marginBottom: '5px', marginTop: '35px' }}>
+                  Onde Comprar?
+                </h3>
+                <div style={{ display: 'flex' }}>
+                  <img
+                    src={logoZe}
+                    alt="ZeDeliveryLogo"
+                    height={50}
+                    width={50}
+                  />
+                  <img
+                    src={logoec}
+                    style={{ marginLeft: '25px', borderRadius: '50%' }}
+                    alt="EmCasaLogo"
+                    height={50}
+                    width={50}
+                  />
+                </div>
                 {/* o que vai vir da api vai ser o link:
                 https://www.youtube.com/embed/ID_DO_VÍDEO
                 concatenado com esse sufixo:
@@ -315,7 +335,7 @@ export default function SliderBox() {
                   id="player"
                   width="100%"
                   maxWidth="100%"
-                  height="315"
+                  height="415"
                   src="https://www.youtube.com/embed/4KXsOm-qQRk?enablejsapi=1"
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
