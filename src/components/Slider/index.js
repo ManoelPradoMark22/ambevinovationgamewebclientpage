@@ -292,34 +292,46 @@ export default function SliderBox() {
                 <DrinkName>Cranberry Tropical</DrinkName>
 
                 <DrinkDescription>
-                  Drink elaborado com Suco de Melância DO BEM, leite condensado,
+                  Drink elaborado com Suco de Uva DO BEM, leite condensado,
                   limão...
                 </DrinkDescription>
                 <h3 style={{ marginBottom: '5px', marginTop: '15px' }}>
                   Conteúdo do Kit
                 </h3>
                 <ul>
-                  <li>- 1L de Suco 'Do Bem' - Melancia</li>
+                  <li>- 1L de Suco 'Do Bem' - Uva</li>
                   <li>- Sachê de açúcar mascavo (50g)</li>
-                  <li>- Etc etc etc</li>
+                  <li>- QrCode (modo de preparo)</li>
                 </ul>
                 <h3 style={{ marginBottom: '5px', marginTop: '25px' }}>
                   Onde Comprar?
                 </h3>
                 <div style={{ display: 'flex', marginBottom: '25px' }}>
-                  <img
-                    src={logoZe}
-                    alt="ZeDeliveryLogo"
-                    height={50}
-                    width={50}
-                  />
-                  <img
-                    src={logoec}
-                    style={{ marginLeft: '25px', borderRadius: '50%' }}
-                    alt="EmCasaLogo"
-                    height={50}
-                    width={50}
-                  />
+                  <a
+                    href="https://www.ze.delivery/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={logoZe}
+                      alt="ZeDeliveryLogo"
+                      height={50}
+                      width={50}
+                    />
+                  </a>
+                  <a
+                    href="https://www.emporiodacerveja.com.br/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={logoec}
+                      style={{ marginLeft: '25px', borderRadius: '50%' }}
+                      alt="EmCasaLogo"
+                      height={50}
+                      width={50}
+                    />
+                  </a>
                 </div>
               </Content>
             </DialogContent>
