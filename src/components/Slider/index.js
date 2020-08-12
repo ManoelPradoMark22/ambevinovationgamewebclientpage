@@ -36,6 +36,7 @@ import styles, {
   BoxImageDetails,
   DrinkName,
   DrinkDescription,
+  SplitText,
   StrawText,
 } from './styles';
 
@@ -297,9 +298,7 @@ export default function SliderBox() {
                   Drink elaborado com Suco de Uva DO BEM, leite condensado,
                   limão...
                 </DrinkDescription>
-                <h3 style={{ marginBottom: '5px', marginTop: '15px' }}>
-                  Conteúdo do Kit
-                </h3>
+                <SplitText>Conteúdo do Kit</SplitText>
                 <ul>
                   <li>- 1L de Suco 'Do Bem' - Uva</li>
                   <li>- Sachê de açúcar mascavo (50g)</li>
@@ -325,9 +324,7 @@ export default function SliderBox() {
                     <StrawText checked={checked}>Canudo reutilizável</StrawText>
                   }
                 />
-                <h3 style={{ marginBottom: '5px', marginTop: '15px' }}>
-                  Onde Comprar?
-                </h3>
+                <SplitText>Onde Comprar?</SplitText>
                 <div style={{ display: 'flex', marginBottom: '25px' }}>
                   <a
                     href="https://www.ze.delivery/"

@@ -90,6 +90,10 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    user-select: none;
+  }
 `;
 
 export const BoxImageDetails = styled.div`
@@ -120,6 +124,13 @@ export const DrinkDescription = styled.text`
   margin-top: 25px;
   max-width: 70%;
   text-align: center;
+`;
+
+export const SplitText = styled.text`
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  user-select: none;
 `;
 
 export const StrawText = styled.text`
