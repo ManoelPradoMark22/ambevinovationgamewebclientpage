@@ -6,12 +6,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import propTypes from 'prop-types';
 
-import Header from '../../../components/Header';
-import HeaderLinks from '../../../components/HeaderLinks';
+import Header from '../../../components/MITmaterialkitreact/Header';
+import HeaderLinks from '../../../components/MITmaterialkitreact/HeaderLinks';
 
-import Parallax from '../../../components/Parallax';
+import Parallax from '../../../components/MITmaterialkitreact/Parallax';
 
-import Footer from '../../../components/Footer';
+import Footer from '../../../components/MITmaterialkitreact/Footer';
 
 import capa from '../../../assets/sand.jpg';
 

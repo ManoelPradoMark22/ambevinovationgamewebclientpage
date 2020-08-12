@@ -32,7 +32,7 @@ import Drawer from '@material-ui/core/Drawer';
 
 import Menu from '@material-ui/icons/Menu';
 
-import logo from '../../assets/ambevlogo.png';
+import logo from '../../../assets/ambevlogo.png';
 
 import styles, { Box } from './styles';
 

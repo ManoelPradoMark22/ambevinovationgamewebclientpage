@@ -15,8 +15,8 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
-import { container, title } from '../material-kit-react';
-import customCheckboxRadioSwitch from '../customCheckboxRadioSwitch';
+import { container, title } from '../MITmaterialkitreact/material-kit-react';
+import customCheckboxRadioSwitch from '../MITmaterialkitreact/customCheckboxRadioSwitch';
 
 const stylesCheckBox = {
   sections: {

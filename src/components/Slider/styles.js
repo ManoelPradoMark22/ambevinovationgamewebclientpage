@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { container, title } from '../material-kit-react';
-import modalStyle from '../modalStyle';
-import tooltipsStyle from '../tooltipsStyle';
-import popoverStyles from '../popoverStyles';
+import { container, title } from '../MITmaterialkitreact/material-kit-react';
+import modalStyle from '../MITmaterialkitreact/modalStyle';
+import tooltipsStyle from '../MITmaterialkitreact/tooltipsStyle';
+import popoverStyles from '../MITmaterialkitreact/popoverStyles';
 
 export const Container = styled.div`
   display: flex;

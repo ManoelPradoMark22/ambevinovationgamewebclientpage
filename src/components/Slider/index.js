@@ -16,8 +16,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Check from '@material-ui/icons/Check';
 import Close from '@material-ui/icons/Close';
 
-import GridContainer from '../Grid/GridContainer';
-import GridItem from '../Grid/GridItem';
+import GridContainer from '../MITmaterialkitreact/Grid/GridContainer';
+import GridItem from '../MITmaterialkitreact/Grid/GridItem';
 
 import drink1 from '../../assets/drink1.jpg';
 import drink2 from '../../assets/drink2.jpg';
