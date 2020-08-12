@@ -321,9 +321,11 @@ export default function SliderBox() {
                       }}
                     />
                   }
-                  label={<StrawText>Canudo reutilizável</StrawText>}
+                  label={
+                    <StrawText checked={checked}>Canudo reutilizável</StrawText>
+                  }
                 />
-                <h3 style={{ marginBottom: '5px', marginTop: '25px' }}>
+                <h3 style={{ marginBottom: '5px', marginTop: '15px' }}>
                   Onde Comprar?
                 </h3>
                 <div style={{ display: 'flex', marginBottom: '25px' }}>
