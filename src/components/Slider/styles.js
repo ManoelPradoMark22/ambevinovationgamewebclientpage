@@ -133,6 +133,46 @@ export const SplitText = styled.text`
   user-select: none;
 `;
 
+export const BoxStraw = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  > svg {
+    font-size: 22px;
+    margin-left: -12px;
+    cursor: pointer;
+
+    &:hover {
+      fill: #4caf50;
+    }
+  }
+`;
+
+export const BoxPlacestoShop = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 7px;
+
+  text {
+    font-weight: bold;
+    user-select: none;
+  }
+
+  > svg {
+    font-size: 22px;
+    margin-left: 4px;
+    cursor: pointer;
+
+    &:hover {
+      fill: rgb(250, 189, 5);
+    }
+  }
+`;
+
 export const StrawText = styled.text`
   color: ${(props) => (props.checked ? '#4caf50' : '#999999')};
   user-select: none;

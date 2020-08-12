@@ -15,6 +15,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 import Check from '@material-ui/icons/Check';
 import Close from '@material-ui/icons/Close';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 import GridContainer from '../MITmaterialkitreact/Grid/GridContainer';
 import GridItem from '../MITmaterialkitreact/Grid/GridItem';
@@ -37,7 +38,9 @@ import styles, {
   DrinkName,
   DrinkDescription,
   SplitText,
+  BoxStraw,
   StrawText,
+  BoxPlacestoShop,
 } from './styles';
 
 import stylesCheckBox from './stylesCheckBox';
@@ -304,27 +307,37 @@ export default function SliderBox() {
                   <li>- Sachê de açúcar mascavo (50g)</li>
                   <li>- QrCode (modo de preparo)</li>
                 </ul>
-                <FormControlLabel
-                  style={{ marginTop: '15px' }}
-                  control={
-                    <Checkbox
-                      checked={checked}
-                      onClick={() => setChecked(!checked)}
-                      checkedIcon={
-                        <Check className={classesCheckBox.checkedIcon} />
-                      }
-                      icon={<Check className={classesCheckBox.uncheckedIcon} />}
-                      classes={{
-                        checked: classesCheckBox.checked,
-                        root: classesCheckBox.checkRoot,
-                      }}
-                    />
-                  }
-                  label={
-                    <StrawText checked={checked}>Canudo reutilizável</StrawText>
-                  }
-                />
-                <SplitText>Onde Comprar?</SplitText>
+                <BoxStraw>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={checked}
+                        onClick={() => setChecked(!checked)}
+                        checkedIcon={
+                          <Check className={classesCheckBox.checkedIcon} />
+                        }
+                        icon={
+                          <Check className={classesCheckBox.uncheckedIcon} />
+                        }
+                        classes={{
+                          checked: classesCheckBox.checked,
+                          root: classesCheckBox.checkRoot,
+                        }}
+                      />
+                    }
+                    label={
+                      <StrawText checked={checked}>
+                        Canudo reutilizável
+                      </StrawText>
+                    }
+                  />
+                  <HelpOutlineIcon />
+                </BoxStraw>
+
+                <BoxPlacestoShop>
+                  <text>Onde Comprar?</text>
+                  <HelpOutlineIcon />
+                </BoxPlacestoShop>
                 <div style={{ display: 'flex', marginBottom: '25px' }}>
                   <a
                     href="https://www.ze.delivery/"
