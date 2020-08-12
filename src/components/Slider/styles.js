@@ -122,6 +122,10 @@ export const DrinkDescription = styled.text`
   text-align: center;
 `;
 
+export const StrawText = styled.text`
+  color: green;
+`;
+
 export const ButtonOpenDrinkDetails = styled.button`
   border: 0;
   background: none;

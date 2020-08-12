@@ -10,6 +10,10 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+
+import Check from '@material-ui/icons/Check';
 import Close from '@material-ui/icons/Close';
 
 import GridContainer from '../Grid/GridContainer';
@@ -32,9 +36,13 @@ import styles, {
   BoxImageDetails,
   DrinkName,
   DrinkDescription,
+  StrawText,
 } from './styles';
 
+import stylesCheckBox from './stylesCheckBox';
+
 const useStyles = makeStyles(styles);
+const useStylesCheckBox = makeStyles(stylesCheckBox);
 
 const Transition = React.forwardRef((props, ref) => (
   <Slide direction="down" ref={ref} {...props} />
@@ -44,6 +52,7 @@ Transition.displayName = 'Transition';
 
 export default function SliderBox() {
   const classes = useStyles();
+  const classesCheckBox = useStylesCheckBox();
 
   const settings = {
     dots: true,
@@ -79,9 +88,11 @@ export default function SliderBox() {
   const [classicModalDetailsDrink, setClassicModalDetailsDrink] = useState(
     false
   );
+  const [checked, setChecked] = useState(false);
 
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
+    setChecked(false);
   }
 
   function closeModalDetailsDrink() {
@@ -294,6 +305,24 @@ export default function SliderBox() {
                   <li>- Sachê de açúcar mascavo (50g)</li>
                   <li>- QrCode (modo de preparo)</li>
                 </ul>
+                <FormControlLabel
+                  style={{ marginTop: '15px' }}
+                  control={
+                    <Checkbox
+                      checked={checked}
+                      onClick={() => setChecked(!checked)}
+                      checkedIcon={
+                        <Check className={classesCheckBox.checkedIcon} />
+                      }
+                      icon={<Check className={classesCheckBox.uncheckedIcon} />}
+                      classes={{
+                        checked: classesCheckBox.checked,
+                        root: classesCheckBox.checkRoot,
+                      }}
+                    />
+                  }
+                  label={<StrawText>Canudo reutilizável</StrawText>}
+                />
                 <h3 style={{ marginBottom: '5px', marginTop: '25px' }}>
                   Onde Comprar?
                 </h3>
