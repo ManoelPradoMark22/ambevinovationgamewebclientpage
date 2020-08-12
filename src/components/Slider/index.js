@@ -12,6 +12,7 @@ import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import EcoIcon from '@material-ui/icons/Eco';
 import Close from '@material-ui/icons/Close';
@@ -41,6 +42,7 @@ import styles, {
   BoxStraw,
   StrawText,
   BoxPlacestoShop,
+  TextBoxTooltip,
 } from './styles';
 
 import stylesCheckBox from './stylesCheckBox';
@@ -93,6 +95,10 @@ export default function SliderBox() {
     false
   );
   const [checked, setChecked] = useState(false);
+  const [isTooltipStrawOpen, setIsTooltipStrawOpen] = useState(false);
+  const [isTooltipPlacesToShopOpen, setIsTooltipPlacesToShopOpen] = useState(
+    false
+  );
 
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
@@ -101,6 +107,8 @@ export default function SliderBox() {
 
   function closeModalDetailsDrink() {
     setClassicModalDetailsDrink(false);
+    setIsTooltipStrawOpen(false);
+    setIsTooltipPlacesToShopOpen(false);
   }
 
   return (
@@ -331,12 +339,65 @@ export default function SliderBox() {
                       </StrawText>
                     }
                   />
-                  <HelpOutlineIcon />
+                  <Tooltip
+                    onOpen={() => setIsTooltipStrawOpen(true)}
+                    onClose={() => setIsTooltipStrawOpen(false)}
+                    open={isTooltipStrawOpen}
+                    interactive={isTooltipStrawOpen}
+                    title={
+                      <TextBoxTooltip>
+                        <IconButton
+                          className={classes.modalCloseButton}
+                          key="close"
+                          aria-label="Close"
+                          color="inherit"
+                          onClick={() => setIsTooltipStrawOpen(false)}
+                        >
+                          <Close className={classes.modalClose} />
+                        </IconButton>
+                        <span>
+                          Por um mundo mais verde, não disponibilizamos canudos
+                          no Kit. Marque a opção 'Canudo reutilizável' caso
+                          também queira comprar o canudo.
+                        </span>
+                      </TextBoxTooltip>
+                    }
+                    placement="top-start"
+                    classes={{ tooltip: classes.tooltip }}
+                  >
+                    <HelpOutlineIcon />
+                  </Tooltip>
                 </BoxStraw>
 
                 <BoxPlacestoShop>
                   <text>Onde Comprar?</text>
-                  <HelpOutlineIcon />
+                  <Tooltip
+                    onOpen={() => setIsTooltipPlacesToShopOpen(true)}
+                    onClose={() => setIsTooltipPlacesToShopOpen(false)}
+                    open={isTooltipPlacesToShopOpen}
+                    interactive={isTooltipPlacesToShopOpen}
+                    title={
+                      <TextBoxTooltip>
+                        <IconButton
+                          className={classes.modalCloseButton}
+                          key="close"
+                          aria-label="Close"
+                          color="inherit"
+                          onClick={() => setIsTooltipPlacesToShopOpen(false)}
+                        >
+                          <Close className={classes.modalClose} />
+                        </IconButton>
+                        <span>
+                          Você será redirecionado para o site que escolher e
+                          então poderá finalizar sua compra.
+                        </span>
+                      </TextBoxTooltip>
+                    }
+                    placement="top-start"
+                    classes={{ tooltip: classes.tooltip }}
+                  >
+                    <HelpOutlineIcon />
+                  </Tooltip>
                 </BoxPlacestoShop>
                 <div style={{ display: 'flex', marginBottom: '25px' }}>
                   <a

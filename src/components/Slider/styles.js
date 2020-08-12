@@ -150,6 +150,22 @@ export const BoxStraw = styled.div`
   }
 `;
 
+export const TextBoxTooltip = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  button {
+    right: -13px;
+    top: 4px;
+    position: absolute;
+  }
+
+  span {
+    user-select: none;
+  }
+`;
+
 export const BoxPlacestoShop = styled.div`
   display: flex;
   justify-content: center;

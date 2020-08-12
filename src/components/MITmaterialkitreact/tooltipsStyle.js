@@ -21,7 +21,7 @@ const tooltipsStyle = {
     minWidth: '130px',
     color: '#555555',
     lineHeight: '1.7em',
-    background: 'rgba(255, 255, 255, 0.8)',
+    background: 'rgb(255, 255, 255)',
     border: 'none',
     borderRadius: '3px',
     boxShadow:
