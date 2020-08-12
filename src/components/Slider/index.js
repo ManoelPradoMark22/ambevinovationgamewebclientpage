@@ -301,7 +301,7 @@ export default function SliderBox() {
                   <a
                     href="https://www.ze.delivery/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     title="Zé Delivery"
                   >
                     <img
@@ -314,7 +314,7 @@ export default function SliderBox() {
                   <a
                     href="https://www.emporiodacerveja.com.br/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     title="Empório da Cerveja"
                   >
                     <img
