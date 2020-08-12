@@ -124,6 +124,7 @@ export const DrinkDescription = styled.text`
 
 export const StrawText = styled.text`
   color: ${(props) => (props.checked ? '#4caf50' : '#999999')};
+  user-select: none;
 `;
 
 export const ButtonOpenDrinkDetails = styled.button`
