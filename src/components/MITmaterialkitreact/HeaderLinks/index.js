@@ -65,7 +65,7 @@ export default function HeaderLinksDefault(props) {
           >
             <Logo>
               <LocalBar />
-              Drinks
+              KitDrinks
             </Logo>
           </Button>
         </Link>

@@ -24,7 +24,7 @@ export default function DefaultLayout({ children }) {
   return (
     <div>
       <Header
-        brand="KitDrinks"
+        brand="Fora da Caixa"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
