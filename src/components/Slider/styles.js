@@ -141,7 +141,7 @@ export const BoxStraw = styled.div`
 
   > svg {
     font-size: 22px;
-    margin-left: -12px;
+    margin-left: -10px;
     cursor: pointer;
 
     &:hover {
