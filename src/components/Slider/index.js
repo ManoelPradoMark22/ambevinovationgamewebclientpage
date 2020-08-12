@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import Check from '@material-ui/icons/Check';
+import EcoIcon from '@material-ui/icons/Eco';
 import Close from '@material-ui/icons/Close';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
@@ -314,10 +314,10 @@ export default function SliderBox() {
                         checked={checked}
                         onClick={() => setChecked(!checked)}
                         checkedIcon={
-                          <Check className={classesCheckBox.checkedIcon} />
+                          <EcoIcon className={classesCheckBox.checkedIcon} />
                         }
                         icon={
-                          <Check className={classesCheckBox.uncheckedIcon} />
+                          <EcoIcon className={classesCheckBox.uncheckedIcon} />
                         }
                         classes={{
                           checked: classesCheckBox.checked,
