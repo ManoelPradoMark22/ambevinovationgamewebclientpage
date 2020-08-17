@@ -21,9 +21,8 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import GridContainer from '../MITmaterialkitreact/Grid/GridContainer';
 import GridItem from '../MITmaterialkitreact/Grid/GridItem';
 
-import drink1 from '../../assets/drink1.jpg';
-import drink2 from '../../assets/drink2.jpg';
-import drink3 from '../../assets/drink3.jpg';
+import list from '../../data';
+
 import logoZe from '../../assets/logoze.png';
 import logoec from '../../assets/logoec.jpg';
 
@@ -113,153 +112,29 @@ export default function SliderBox() {
 
   return (
     <div>
-      <Container>
-        <CategoryBoxFeat>
-          <h2>Verão</h2>
-          <Slider {...settings}>
-            <div>
-              <Product>
-                <ButtonOpenDrinkDetails onClick={() => openModalDetailsDrink()}>
-                  <BoxImage>
-                    <text>+ detalhes</text>
-                    <img src={drink1} alt="produto" />
-                  </BoxImage>
-                </ButtonOpenDrinkDetails>
-                <h3>Cranberry Tropical</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink2} alt="produto" />
-                </BoxImage>
-                <h3>Bahama Mama</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink3} alt="produto" />
-                </BoxImage>
-                <h3>Beachcomber</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink2} alt="produto" />
-                </BoxImage>
-                <h3>Bahama Mama</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink3} alt="produto" />
-                </BoxImage>
-                <h3>Beachcomber</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink1} alt="produto" />
-                </BoxImage>
-                <h3>Cranberry Tropical</h3>
-              </Product>
-            </div>
-          </Slider>
-          <InvisibleBox />
-        </CategoryBoxFeat>
-
-        <CategoryBoxFeat>
-          <h2>Inverno</h2>
-          <Slider {...settings}>
-            <div>
-              <Product>
-                <ButtonOpenDrinkDetails onClick={() => openModalDetailsDrink()}>
-                  <BoxImage>
-                    <img src={drink1} alt="produto" />
-                  </BoxImage>
-                </ButtonOpenDrinkDetails>
-                <h3>Cranberry Tropical</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink2} alt="produto" />
-                </BoxImage>
-                <h3>Bahama Mama</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink3} alt="produto" />
-                </BoxImage>
-                <h3>Beachcomber</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink2} alt="produto" />
-                </BoxImage>
-                <h3>Bahama Mama</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink3} alt="produto" />
-                </BoxImage>
-                <h3>Beachcomber</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink1} alt="produto" />
-                </BoxImage>
-                <h3>Cranberry Tropical</h3>
-              </Product>
-            </div>
-          </Slider>
-          <InvisibleBox />
-        </CategoryBoxFeat>
-
-        <CategoryBoxFeat>
-          <h2>Party</h2>
-          <Slider {...settings}>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink1} alt="produto" />
-                </BoxImage>
-                <h3>Cranberry Tropical</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink2} alt="produto" />
-                </BoxImage>
-                <h3>Bahama Mama</h3>
-              </Product>
-            </div>
-            <div>
-              <Product>
-                <BoxImage>
-                  <img src={drink3} alt="produto" />
-                </BoxImage>
-                <h3>Beachcomber</h3>
-              </Product>
-            </div>
-          </Slider>
-          <InvisibleBox />
-        </CategoryBoxFeat>
-      </Container>
+      {list &&
+        list.map((cat) => (
+          <CategoryBoxFeat key={cat.categorie_id}>
+            <h2>{cat.categorie_name}</h2>
+            <Slider {...settings}>
+              {cat.kits.map((kit) => (
+                <div key={kit.product_id}>
+                  <Product>
+                    <ButtonOpenDrinkDetails
+                      onClick={() => openModalDetailsDrink()}
+                    >
+                      <BoxImage>
+                        <text>+ detalhes</text>
+                        <img src={kit.image} alt="produto" />
+                      </BoxImage>
+                    </ButtonOpenDrinkDetails>
+                    <h3>{kit.name}</h3>
+                  </Product>
+                </div>
+              ))}
+            </Slider>
+          </CategoryBoxFeat>
+        ))}
 
       {/* MODAL DRINK DETAILS */}
       <GridContainer>
@@ -300,7 +175,7 @@ export default function SliderBox() {
             >
               <Content>
                 <BoxImageDetails>
-                  <img src={drink1} alt="produto" />
+                  <img src={logoZe} alt="produto" />
                 </BoxImageDetails>
 
                 <DrinkName>Cranberry Tropical</DrinkName>
