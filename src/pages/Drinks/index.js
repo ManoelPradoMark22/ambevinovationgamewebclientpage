@@ -8,7 +8,7 @@ import SliderBox from '../../components/Slider';
 
 import Parallax from '../../components/MITmaterialkitreact/Parallax';
 
-import expcut from '../../assets/expcut.png';
+import capaforadacaixacut from '../../assets/capaforadacaixacut.png';
 
 import styles from '../../components/MITmaterialkitreact/defaultStyle';
 
@@ -18,7 +18,7 @@ function Drinks() {
   const classes = useStyles();
   return (
     <>
-      <Parallax image={expcut} />
+      <Parallax image={capaforadacaixacut} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <div style={{ overflow: 'hidden' }}>

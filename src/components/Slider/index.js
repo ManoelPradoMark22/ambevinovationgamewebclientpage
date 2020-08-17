@@ -167,7 +167,7 @@ export default function SliderBox() {
               {cat.kits.map(
                 (kit) =>
                   (valueFilter === 'all' && (
-                    <div key={kit.product_id}>
+                    <div key={kit.kit_id}>
                       <Product>
                         <ButtonOpenDrinkDetails
                           onClick={() => {

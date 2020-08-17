@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const CategoryBoxFeat = styled.div`
   margin-top: 40px;
   margin-bottom: 50px;
-  background: rgba(214, 102, 91, 0.2);
+  background: rgba(222, 213, 211, 0.8);
   border-radius: 16px;
   > h2 {
     padding-top: 20px;

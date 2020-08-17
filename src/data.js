@@ -10,6 +10,7 @@ const list = [
     categorie_name: 'Café da manhã',
     kits: [
       {
+        kit_id: 1,
         alcool: false,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -17,6 +18,7 @@ const list = [
         image: `${drink1}`,
       },
       {
+        kit_id: 2,
         alcool: false,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -24,6 +26,7 @@ const list = [
         image: `${drink2}`,
       },
       {
+        kit_id: 3,
         alcool: true,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -37,6 +40,7 @@ const list = [
     categorie_name: 'Pré-Treino',
     kits: [
       {
+        kit_id: 4,
         alcool: false,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -44,6 +48,7 @@ const list = [
         image: `${drink3}`,
       },
       {
+        kit_id: 5,
         alcool: false,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -51,6 +56,7 @@ const list = [
         image: `${drink2}`,
       },
       {
+        kit_id: 6,
         alcool: true,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -64,6 +70,7 @@ const list = [
     categorie_name: 'Party',
     kits: [
       {
+        kit_id: 7,
         alcool: true,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
@@ -71,6 +78,7 @@ const list = [
         image: `${drink2}`,
       },
       {
+        kit_id: 8,
         alcool: false,
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
