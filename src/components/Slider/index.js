@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -22,6 +22,7 @@ import Close from '@material-ui/icons/Close';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import FormatColorResetIcon from '@material-ui/icons/FormatColorReset';
 
+import { toast } from 'react-toastify';
 import GridContainer from '../MITmaterialkitreact/Grid/GridContainer';
 import GridItem from '../MITmaterialkitreact/Grid/GridItem';
 
@@ -113,6 +114,10 @@ export default function SliderBox() {
   const [content, setContent] = useState([]);
   const [kitImg, setKitImg] = useState([]);
 
+  useEffect(() => {
+    toast.error('alkashdlk');
+  }, [valueFilter]);
+
   const handleChangeValueStatusProd = (event) => {
     setValueFilter(event.target.value);
   };
@@ -159,34 +164,93 @@ export default function SliderBox() {
           <CategoryBoxFeat key={cat.categorie_id}>
             <h2>{cat.categorie_name}</h2>
             <Slider {...settings}>
-              {cat.kits.map((kit) => (
-                <div key={kit.product_id}>
-                  <Product>
-                    <ButtonOpenDrinkDetails
-                      onClick={() => {
-                        setKitName(kit.name);
-                        setKitDescription(kit.description);
-                        setContent(kit.content);
-                        setKitImg(kit.image);
-                        openModalDetailsDrink();
-                      }}
-                    >
-                      <ImgAndIcons>
-                        {kit.alcool === false && (
-                          <IconAlcool>
-                            <FormatColorResetIcon />
-                          </IconAlcool>
-                        )}
-                        <BoxImage>
-                          <text>+ detalhes</text>
-                          <img src={kit.image} alt="produto" />
-                        </BoxImage>
-                      </ImgAndIcons>
-                    </ButtonOpenDrinkDetails>
-                    <h3>{kit.name}</h3>
-                  </Product>
-                </div>
-              ))}
+              {cat.kits.map(
+                (kit) =>
+                  (valueFilter === 'all' && (
+                    <div key={kit.product_id}>
+                      <Product>
+                        <ButtonOpenDrinkDetails
+                          onClick={() => {
+                            setKitName(kit.name);
+                            setKitDescription(kit.description);
+                            setContent(kit.content);
+                            setKitImg(kit.image);
+                            openModalDetailsDrink();
+                          }}
+                        >
+                          <ImgAndIcons>
+                            {kit.alcool === false && (
+                              <IconAlcool>
+                                <FormatColorResetIcon />
+                              </IconAlcool>
+                            )}
+                            <BoxImage>
+                              <text>+ detalhes</text>
+                              <img src={kit.image} alt="produto" />
+                            </BoxImage>
+                          </ImgAndIcons>
+                        </ButtonOpenDrinkDetails>
+                        <h3>{kit.name}</h3>
+                      </Product>
+                    </div>
+                  )) ||
+                  (valueFilter === 'alcool' && kit.alcool && (
+                    <div key={kit.product_id}>
+                      <Product>
+                        <ButtonOpenDrinkDetails
+                          onClick={() => {
+                            setKitName(kit.name);
+                            setKitDescription(kit.description);
+                            setContent(kit.content);
+                            setKitImg(kit.image);
+                            openModalDetailsDrink();
+                          }}
+                        >
+                          <ImgAndIcons>
+                            {kit.alcool === false && (
+                              <IconAlcool>
+                                <FormatColorResetIcon />
+                              </IconAlcool>
+                            )}
+                            <BoxImage>
+                              <text>+ detalhes</text>
+                              <img src={kit.image} alt="produto" />
+                            </BoxImage>
+                          </ImgAndIcons>
+                        </ButtonOpenDrinkDetails>
+                        <h3>{kit.name}</h3>
+                      </Product>
+                    </div>
+                  )) ||
+                  (valueFilter === 'no_alcool' && !kit.alcool && (
+                    <div key={kit.product_id}>
+                      <Product>
+                        <ButtonOpenDrinkDetails
+                          onClick={() => {
+                            setKitName(kit.name);
+                            setKitDescription(kit.description);
+                            setContent(kit.content);
+                            setKitImg(kit.image);
+                            openModalDetailsDrink();
+                          }}
+                        >
+                          <ImgAndIcons>
+                            {kit.alcool === false && (
+                              <IconAlcool>
+                                <FormatColorResetIcon />
+                              </IconAlcool>
+                            )}
+                            <BoxImage>
+                              <text>+ detalhes</text>
+                              <img src={kit.image} alt="produto" />
+                            </BoxImage>
+                          </ImgAndIcons>
+                        </ButtonOpenDrinkDetails>
+                        <h3>{kit.name}</h3>
+                      </Product>
+                    </div>
+                  ))
+              )}
             </Slider>
           </CategoryBoxFeat>
         ))}
