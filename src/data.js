@@ -23,6 +23,13 @@ const list = [
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink2}`,
       },
+      {
+        alcool: true,
+        name: 'Mojito',
+        description: 'Drink excelente para uma boa hidratação pela manhã',
+        content: 'Hortelã, H2OH!, açúcar, gelo',
+        image: `${drink3}`,
+      },
     ],
   },
   {
@@ -43,6 +50,13 @@ const list = [
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink2}`,
       },
+      {
+        alcool: true,
+        name: 'Mojito',
+        description: 'Drink excelente para uma boa hidratação pela manhã',
+        content: 'Hortelã, H2OH!, açúcar, gelo',
+        image: `${drink1}`,
+      },
     ],
   },
   {
@@ -54,7 +68,7 @@ const list = [
         name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
-        image: `${drink1}`,
+        image: `${drink2}`,
       },
       {
         alcool: false,

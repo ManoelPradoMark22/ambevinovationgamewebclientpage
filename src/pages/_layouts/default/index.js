@@ -1,26 +1,13 @@
 import React from 'react';
 
-import classNames from 'classnames';
-
-import { makeStyles } from '@material-ui/core/styles';
-
 import propTypes from 'prop-types';
 
 import Header from '../../../components/MITmaterialkitreact/Header';
 import HeaderLinks from '../../../components/MITmaterialkitreact/HeaderLinks';
 
-import Parallax from '../../../components/MITmaterialkitreact/Parallax';
-
 import Footer from '../../../components/MITmaterialkitreact/Footer';
 
-import capa from '../../../assets/sand.jpg';
-
-import styles from './styles';
-
-const useStyles = makeStyles(styles);
-
 export default function DefaultLayout({ children }) {
-  const classes = useStyles();
   return (
     <div>
       <Header
@@ -33,10 +20,7 @@ export default function DefaultLayout({ children }) {
           color: 'white',
         }}
       />
-      <Parallax image={capa} />
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>{children}</div>
-      </div>
+      {children}
       <Footer />
     </div>
   );
