@@ -42,12 +42,14 @@ function Main() {
             <InstagramIcon />
 
             <MessageText>
-              <h4>
+              <h3>
                 Siga a gente no Instagram (@foradacaixa_ambev), poste uma foto
                 sua com um dos nossos KitDrinks!
+              </h3>
+              <h4 style={{ marginBottom: '5px' }}>
+                Coloque a localização e marque a gente!
               </h4>
-              <h5>Coloque a localização e marque a gente!</h5>
-              <h5>Estaremos de olho e postaremos as melhores aqui!</h5>
+              <h4>Estaremos de olho e postaremos as melhores aqui!</h4>
             </MessageText>
 
             <img

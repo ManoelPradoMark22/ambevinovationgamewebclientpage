@@ -32,7 +32,8 @@ import Drawer from '@material-ui/core/Drawer';
 
 import Menu from '@material-ui/icons/Menu';
 
-import logo from '../../../assets/ambevlogo.png';
+import logoambev from '../../../assets/ambevlogo.png';
+import logo from '../../../assets/logoforacut.png';
 
 import styles, { Box } from './styles';
 
@@ -84,8 +85,8 @@ export default function HeaderDefault(props) {
     <Link to="/" className={classes.moreLinks}>
       <Button className={classes.title}>
         <Box>
-          <img src={logo} width={90} height={31} alt="logo" />
-          {brand}
+          <img src={logoambev} width={94} height={35} alt="logo" />
+          <img src={logo} width={60} height={35} alt="logo" />
         </Box>
       </Button>
     </Link>

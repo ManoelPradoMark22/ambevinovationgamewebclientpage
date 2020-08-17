@@ -8,7 +8,7 @@ import SliderBox from '../../components/Slider';
 
 import Parallax from '../../components/MITmaterialkitreact/Parallax';
 
-import capaforadacaixacut from '../../assets/capaforadacaixacut.png';
+import capaforadacaixacut from '../../assets/capaforadacaixacut2.png';
 
 import styles from '../../components/MITmaterialkitreact/defaultStyle';
 

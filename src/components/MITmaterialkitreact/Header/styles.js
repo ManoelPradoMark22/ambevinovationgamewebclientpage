@@ -38,7 +38,7 @@ export const Box = styled.div`
   margin: auto 0;
 
   img {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 `;
 

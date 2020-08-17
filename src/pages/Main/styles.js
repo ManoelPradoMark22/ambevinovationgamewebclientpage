@@ -9,6 +9,7 @@ export const Container = styled.div`
 
   h1 {
     margin-bottom: 25px;
+    font-family: 'ribes', 'syne bold,' Gadget, sans-serif;
   }
 
   svg {
