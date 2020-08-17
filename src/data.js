@@ -2,19 +2,23 @@ import drink1 from './assets/drink1.jpg';
 import drink2 from './assets/drink2.jpg';
 import drink3 from './assets/drink3.jpg';
 
+/* SIMULANDO DADOS VINDOS DE UMA API COMPARTILHADA COM OS CANAIS DE VENDA DA AMBEV! */
+
 const list = [
   {
     categorie_id: 1,
     categorie_name: 'Café da manhã',
     kits: [
       {
-        name: 'Mojito sem álcool',
+        alcool: false,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink1}`,
       },
       {
-        name: 'Mojito sem álcool',
+        alcool: false,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink2}`,
@@ -26,13 +30,15 @@ const list = [
     categorie_name: 'Pré-Treino',
     kits: [
       {
-        name: 'Mojito sem álcool',
+        alcool: false,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink3}`,
       },
       {
-        name: 'Mojito sem álcool',
+        alcool: false,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink2}`,
@@ -44,13 +50,15 @@ const list = [
     categorie_name: 'Party',
     kits: [
       {
-        name: 'Mojito sem álcool',
+        alcool: true,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink1}`,
       },
       {
-        name: 'Mojito sem álcool',
+        alcool: false,
+        name: 'Mojito',
         description: 'Drink excelente para uma boa hidratação pela manhã',
         content: 'Hortelã, H2OH!, açúcar, gelo',
         image: `${drink3}`,

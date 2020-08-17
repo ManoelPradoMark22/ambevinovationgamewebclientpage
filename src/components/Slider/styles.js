@@ -199,6 +199,25 @@ export const ButtonOpenDrinkDetails = styled.button`
   background: none;
 `;
 
+export const BoxRadio = styled.div`
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ImgAndIcons = styled.div`
+  position: relative;
+`;
+
+export const IconAlcool = styled.div`
+  position: absolute;
+
+  > svg {
+    filter: drop-shadow(2px 2px 2px #4f71b0);
+  }
+`;
+
 const styles = {
   section: {
     padding: '70px 0 0',

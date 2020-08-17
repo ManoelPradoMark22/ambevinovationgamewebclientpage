@@ -10,6 +10,9 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -17,6 +20,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import EcoIcon from '@material-ui/icons/Eco';
 import Close from '@material-ui/icons/Close';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import FormatColorResetIcon from '@material-ui/icons/FormatColorReset';
 
 import GridContainer from '../MITmaterialkitreact/Grid/GridContainer';
 import GridItem from '../MITmaterialkitreact/Grid/GridItem';
@@ -33,6 +37,9 @@ import styles, {
   BoxImage,
   ButtonOpenDrinkDetails,
   InvisibleBox,
+  BoxRadio,
+  ImgAndIcons,
+  IconAlcool,
   Content,
   BoxImageDetails,
   DrinkName,
@@ -98,10 +105,17 @@ export default function SliderBox() {
   const [isTooltipPlacesToShopOpen, setIsTooltipPlacesToShopOpen] = useState(
     false
   );
+
+  const [valueFilter, setValueFilter] = useState('all');
+
   const [kitName, setKitName] = useState([]);
   const [kitDescription, setKitDescription] = useState([]);
   const [content, setContent] = useState([]);
   const [kitImg, setKitImg] = useState([]);
+
+  const handleChangeValueStatusProd = (event) => {
+    setValueFilter(event.target.value);
+  };
 
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
@@ -116,6 +130,30 @@ export default function SliderBox() {
 
   return (
     <div>
+      <BoxRadio>
+        <FormControl component="fieldset">
+          <RadioGroup
+            row
+            aria-label="statusProd"
+            name="status"
+            value={valueFilter}
+            onChange={handleChangeValueStatusProd}
+          >
+            <FormControlLabel value="all" control={<Radio />} label="Todos" />
+            <FormControlLabel
+              value="alcool"
+              control={<Radio />}
+              label="Álcóolicos"
+            />
+            <FormControlLabel
+              value="no_alcool"
+              control={<Radio />}
+              label="Não Álcóolicos"
+            />
+          </RadioGroup>
+        </FormControl>
+      </BoxRadio>
+
       {list &&
         list.map((cat) => (
           <CategoryBoxFeat key={cat.categorie_id}>
@@ -133,10 +171,17 @@ export default function SliderBox() {
                         openModalDetailsDrink();
                       }}
                     >
-                      <BoxImage>
-                        <text>+ detalhes</text>
-                        <img src={kit.image} alt="produto" />
-                      </BoxImage>
+                      <ImgAndIcons>
+                        {kit.alcool === false && (
+                          <IconAlcool>
+                            <FormatColorResetIcon />
+                          </IconAlcool>
+                        )}
+                        <BoxImage>
+                          <text>+ detalhes</text>
+                          <img src={kit.image} alt="produto" />
+                        </BoxImage>
+                      </ImgAndIcons>
                     </ButtonOpenDrinkDetails>
                     <h3>{kit.name}</h3>
                   </Product>
