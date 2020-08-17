@@ -98,6 +98,10 @@ export default function SliderBox() {
   const [isTooltipPlacesToShopOpen, setIsTooltipPlacesToShopOpen] = useState(
     false
   );
+  const [kitName, setKitName] = useState([]);
+  const [kitDescription, setKitDescription] = useState([]);
+  const [content, setContent] = useState([]);
+  const [kitImg, setKitImg] = useState([]);
 
   function openModalDetailsDrink() {
     setClassicModalDetailsDrink(true);
@@ -121,7 +125,13 @@ export default function SliderBox() {
                 <div key={kit.product_id}>
                   <Product>
                     <ButtonOpenDrinkDetails
-                      onClick={() => openModalDetailsDrink()}
+                      onClick={() => {
+                        setKitName(kit.name);
+                        setKitDescription(kit.description);
+                        setContent(kit.content);
+                        setKitImg(kit.image);
+                        openModalDetailsDrink();
+                      }}
                     >
                       <BoxImage>
                         <text>+ detalhes</text>
@@ -175,21 +185,14 @@ export default function SliderBox() {
             >
               <Content>
                 <BoxImageDetails>
-                  <img src={logoZe} alt="produto" />
+                  <img src={kitImg} alt="produto" />
                 </BoxImageDetails>
 
-                <DrinkName>Cranberry Tropical</DrinkName>
+                <DrinkName>{kitName}</DrinkName>
 
-                <DrinkDescription>
-                  Drink elaborado com Suco de Uva DO BEM, leite condensado,
-                  limão...
-                </DrinkDescription>
+                <DrinkDescription>{kitDescription}</DrinkDescription>
                 <SplitText>Conteúdo do Kit</SplitText>
-                <ul>
-                  <li>- 1L de Suco 'Do Bem' - Uva</li>
-                  <li>- Sachê de açúcar mascavo (50g)</li>
-                  <li>- QrCode (modo de preparo)</li>
-                </ul>
+                <h3>{content}</h3>
                 <BoxStraw>
                   <FormControlLabel
                     control={
