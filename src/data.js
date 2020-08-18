@@ -6,6 +6,9 @@ import drink5 from './assets/drink5.jpg';
 import drink6 from './assets/drink6.jpg';
 import drink7 from './assets/drink7.jpg';
 import drink8 from './assets/drink8.jpg';
+import drink9 from './assets/drink9.jpg';
+import drink10 from './assets/drink10.jpg';
+import drink11 from './assets/drink11.jpg';
 
 /* SIMULANDO DADOS VINDOS DE UMA API COMPARTILHADA COM OS CANAIS DE VENDA DA AMBEV! */
 
@@ -96,6 +99,34 @@ const list = [
         content:
           '2 Skol beats senses (269ml), 1 suco de limão DO BEM™️ (1L), leite condensado',
         image: `${drink3}`,
+      },
+      {
+        kit_id: 9,
+        alcool: true,
+        name: 'RedBeats',
+        description:
+          'Curtir aquele som com os amigos e se refrescando, não tem preço.',
+        content:
+          '1 suco de limão DO BEM™️ (1L), 1 Skol Beats Secret (269ml), limão',
+        image: `${drink9}`,
+      },
+      {
+        kit_id: 10,
+        alcool: true,
+        name: 'BullPower',
+        description: 'Uma bebida forte e mágica, igual você :)',
+        content:
+          '1 Cachça caracu (350ml), 1 Skol Beats Secret (269ml), 1 suco de caju DO BEM™️ (1L), leite condensado',
+        image: `${drink10}`,
+      },
+      {
+        kit_id: 11,
+        alcool: true,
+        name: 'SenseInfinity',
+        description: 'Aproveite a festa, com moderação! :)',
+        content:
+          '1 Cachça caracu (350ml), 1 Skol Beats GT (269ml),1 suco de uva integral DO BEM™️ (1L)',
+        image: `${drink11}`,
       },
     ],
   },
