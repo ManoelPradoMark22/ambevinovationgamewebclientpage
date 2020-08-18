@@ -1,4 +1,4 @@
-# Fora da Caixa ![logo](./src/assets/logoforacut.png)
+# <img src="./src/assets/ambevlogo.png" height="70" width="200" /> ![logo](./src/assets/logoforacut.png)
 ## Página Web (desenvolvida em ReactJs) do projeto Fora da Caixa, desenvolvido para o Inovation Game 2 da AMBEV.
 
 [Vídeo DEMO](https://youtu.be/I1b-d4HrUSg)
@@ -26,17 +26,11 @@ Com as dependências adicionadas, execute, também na raiz do projeto, <b>yarn s
 <br />
 [Linkedin](https://www.linkedin.com/in/juliana-oliveira-659bb39b/)
 
-<br />
-<br />
-
 <b>Luis Gustavo</b> (Business)
 <br />
 <img src="./src/assets/gustavo.jpg" height="96" width="96" />
 <br />
 [Linkedin](https://www.linkedin.com/in/lu%C3%ADs-gustavo-silva-barros-80753b92/)
-
-<br />
-<br />
 
 <b>Manoel Prado</b> (Desenvolvedor)
 <br />
@@ -44,10 +38,7 @@ Com as dependências adicionadas, execute, também na raiz do projeto, <b>yarn s
 <br />
 [Linkedin](https://www.linkedin.com/in/manoel-de-oliveira-prado-neto-fullstack-developer/)
 
-<br />
-<br />
-
-<b>Sofia Bercianine</b> (Desenvolvedor)
+<b>Sofia Bercianine</b> (UX Designer)
 <br />
 <img src="./src/assets/sofia.jpg" height="100" width="96" />
 <br />
