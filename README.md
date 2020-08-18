@@ -1,52 +1,59 @@
 # Fora da Caixa ![logo](./src/assets/logoforacut.png)
-##Página Web (desenvolvida em ReactJs) do projeto Fora da Caixa, desenvolvido para o Inovation Game 2 da AMBEV.
+## Página Web (desenvolvida em ReactJs) do projeto Fora da Caixa, desenvolvido para o Inovation Game 2 da AMBEV.
 
 [Vídeo DEMO](https://youtu.be/I1b-d4HrUSg)
-[Vídeo Pitch](https://youtu.be/IP6nCEgeYHU)
-
 <br />
+[Vídeo Pitch](https://youtu.be/IP6nCEgeYHU)
 
 Para a aplicação funcionar, siga os passos:
 <ul>
 
 <li>
-Após clonar o repositório, no terminal e na raiz do projeto execute   yarn   para adicionar as dependências;
+Após clonar o repositório, no terminal e na raiz do projeto execute <b>yarn</b> para adicionar as dependências;
 </li>
 
 <li>
-Com as dependências adicionadas, execute, também na raiz do projeto,   yarn start   para a aplicação rodar.
+Com as dependências adicionadas, execute, também na raiz do projeto, <b>yarn start</b> para a aplicação rodar.
 </li>
 
 </ul>
 
-###Equipe:
+### Equipe:
 
-<ul>
-
-<li>
-Juliana Oliveira (Business)
+<b>Juliana Oliveira</b> (Business)
+<br />
 <img src="./src/assets/juliana.jpg" height="94" width="84" />
+<br />
 [Linkedin](https://www.linkedin.com/in/juliana-oliveira-659bb39b/)
-</li>
 
-<li>
-####Luis Gustavo (Business)
+<br />
+<br />
+
+<b>Luis Gustavo</b> (Business)
+<br />
 <img src="./src/assets/gustavo.jpg" height="96" width="96" />
+<br />
 [Linkedin](https://www.linkedin.com/in/lu%C3%ADs-gustavo-silva-barros-80753b92/)
-</li>
 
-<li>
-####Manoel Prado (Desenvolvedor)
+<br />
+<br />
+
+<b>Manoel Prado</b> (Desenvolvedor)
+<br />
 <img src="./src/assets/manoel.jpg" height="106" width="85" />
+<br />
 [Linkedin](https://www.linkedin.com/in/manoel-de-oliveira-prado-neto-fullstack-developer/)
-</li>
 
-<li>
-####Sofia Bercianine (Desenvolvedor)
+<br />
+<br />
+
+<b>Sofia Bercianine</b> (Desenvolvedor)
+<br />
 <img src="./src/assets/sofia.jpg" height="100" width="96" />
+<br />
 [Linkedin](https://www.linkedin.com/in/sofiabercianine/)
-</li>
 
-</ul>
+<br />
+<br />
 
 ![GIF](demogif.gif)
