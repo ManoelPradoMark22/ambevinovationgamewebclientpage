@@ -57,7 +57,7 @@ export default function Footer(props) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
+                href="https://www.ambev.com.br/sobre/"
                 className={classes.block}
                 // eslint-disable-next-line
                 target="_blank"
@@ -67,7 +67,7 @@ export default function Footer(props) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
+                href="https://www.ambev.com.br/blog/"
                 className={classes.block}
                 // eslint-disable-next-line
                 target="_blank"
@@ -77,12 +77,12 @@ export default function Footer(props) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/license?ref=mkr-footer"
+                href="https://www.ambev.com.br/contato/"
                 className={classes.block}
                 // eslint-disable-next-line
                 target="_blank"
               >
-                Licenses
+                Contato
               </a>
             </ListItem>
           </List>

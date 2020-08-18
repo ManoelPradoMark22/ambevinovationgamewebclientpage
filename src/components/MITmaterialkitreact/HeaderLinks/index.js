@@ -49,8 +49,11 @@ export default function HeaderLinksDefault(props) {
               Início
             </Link>,
             // eslint-disable-next-line
-            <a className={classes.dropdownLink} onClick={() => {}}>
-              Política
+            <a className={classes.dropdownLink} href="https://www.catalogoambev.com.br/site"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Catálogo Ambev
             </a>,
           ]}
         />

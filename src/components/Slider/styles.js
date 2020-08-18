@@ -113,22 +113,29 @@ export const BoxImageDetails = styled.div`
   }
 `;
 
-export const DrinkName = styled.text`
+export const DrinkName = styled.div`
   margin-top: 10px;
+  max-width: 70%;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: bold;
 `;
 
 export const DrinkDescription = styled.text`
-  margin-top: 25px;
+  margin-top: 10px;
+  max-width: 70%;
+  text-align: center;
+`;
+
+export const DrinkContent = styled.div`
+  margin-top: 5px;
   max-width: 70%;
   text-align: center;
 `;
 
 export const SplitText = styled.text`
   margin-top: 15px;
-  margin-bottom: 5px;
   font-weight: bold;
   user-select: none;
 `;

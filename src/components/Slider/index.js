@@ -45,6 +45,7 @@ import styles, {
   BoxImageDetails,
   DrinkName,
   DrinkDescription,
+  DrinkContent,
   SplitText,
   BoxStraw,
   StrawText,
@@ -297,11 +298,15 @@ export default function SliderBox() {
                   <img src={kitImg} alt="produto" />
                 </BoxImageDetails>
 
-                <DrinkName>{kitName}</DrinkName>
+                <DrinkName>
+                  <text>{kitName}</text>
+                </DrinkName>
 
                 <DrinkDescription>{kitDescription}</DrinkDescription>
-                <SplitText>Conteúdo do Kit</SplitText>
-                <h3>{content}</h3>
+                <SplitText>Conteúdo do Kit:</SplitText>
+                <DrinkContent>
+                  <text>{content}</text>
+                </DrinkContent>
                 <BoxStraw>
                   <FormControlLabel
                     control={
@@ -375,8 +380,8 @@ export default function SliderBox() {
                           <Close className={classes.modalClose} />
                         </IconButton>
                         <span>
-                          Você será redirecionado para o site que escolher e
-                          então poderá finalizar sua compra.
+                          Você será redirecionado para o site parceiro que
+                          escolher e então poderá finalizar sua compra.
                         </span>
                       </TextBoxTooltip>
                     }
