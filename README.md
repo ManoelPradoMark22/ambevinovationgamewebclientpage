@@ -1,6 +1,6 @@
 # <img src="./src/assets/ambevlogo.png" height="70" width="200" /> ![logo](./src/assets/logoforacut.png)
 ## Página Web (desenvolvida em ReactJs) do projeto Fora da Caixa, desenvolvido para o Inovation Game 2 da AMBEV.
-### ![certificado](./src/'certificado - hackathon ambev 2 Manoel de Oliveira Prado Neto.PNG')
+### ![certificado](./src/assets/certificado)
 
 [Vídeo DEMO](https://youtu.be/I1b-d4HrUSg)
 <br />
